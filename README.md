@@ -1,135 +1,174 @@
-<div align="center">
-  <br />
-    <a href="https://www.youtube.com/watch?v=iYOz165wGkQ" target="_blank">
-      <img src="public/readme/hero.webp" alt="Project Banner">
-    </a>
-  <br />
+# Resumind - AI Resume Analyzer
 
-  <div>
-    <img alt="Static Badge" src="https://img.shields.io/badge/React-4c84f3?style=for-the-badge&logo=react&logoColor=white">
-        <img src="https://img.shields.io/badge/-Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-        <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="TypeScript" />
-    <img alt="Static Badge" src="https://img.shields.io/badge/Puter.js-181758?style=for-the-badge&logoColor=white">
-  </div>
+An intelligent resume analysis platform that provides AI-powered feedback and ATS (Applicant Tracking System) scoring to help job seekers optimize their resumes for specific job applications.
 
-  <h3 align="center">AI Resume Analyzer</h3>
+## Overview
 
-   <div align="center">
-     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/watch?v=XUkNR-JfHwo" target="_blank"><b>JavaScript Mastery</b></a> YouTube. Join the JSM family!
-    </div>
-</div>
+Resumind analyzes your resume against job descriptions using Claude AI, providing detailed feedback across multiple dimensions including ATS compatibility, content quality, structure, tone, and skills alignment. The application runs entirely in the browser with serverless backend capabilities powered by Puter.js.
 
-## 📋 <a name="table">Table of Contents</a>
+## Features
 
-1. ✨ [Introduction](#introduction)
-2. ⚙️ [Tech Stack](#tech-stack)
-3. 🔋 [Features](#features)
-4. 🤸 [Quick Start](#quick-start)
-5. 🔗 [Assets](#links)
-6. 🚀 [More](#more)
+- **Browser-Based Authentication** - Secure sign-in powered by Puter.js with no backend setup required
+- **Resume Upload & Storage** - Drag-and-drop PDF upload with cloud storage
+- **AI-Powered Analysis** - Claude 3.7 Sonnet analyzes resumes against job descriptions
+- **ATS Scoring** - Get a 0-100 score on how well your resume performs with Applicant Tracking Systems
+- **Multi-Dimensional Feedback** - Detailed scoring across 5 categories:
+  - ATS Compatibility
+  - Tone & Style
+  - Content Quality
+  - Structure & Formatting
+  - Skills Alignment
+- **Visual Score Display** - Animated gauges and badges for easy score interpretation
+- **Resume Management** - Track multiple resume submissions and their feedback
+- **PDF Preview** - Automatic conversion of resume to image for quick preview
+- **Responsive Design** - Works seamlessly across desktop, tablet, and mobile devices
 
-## 🚨 Tutorial
+## Tech Stack
 
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>.
+- **React 19** - Modern React with hooks and concurrent features
+- **React Router v7** - File-based routing with data loaders and SSR support
+- **TypeScript** - Type-safe development with strict mode enabled
+- **Tailwind CSS 4** - Utility-first styling with custom animations
+- **Vite** - Lightning-fast build tool and dev server
+- **Zustand** - Minimal state management with zero boilerplate
+- **Puter.js** - Serverless backend SDK providing:
+  - Authentication
+  - File storage
+  - Key-value database
+  - AI services (Claude, GPT, DALL·E, OCR)
+- **pdfjs-dist** - Client-side PDF rendering and processing
+- **react-dropzone** - Drag-and-drop file upload interface
 
-If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
+## Prerequisites
 
-<a href="https://www.youtube.com/watch?v=iYOz165wGkQ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
+- [Node.js](https://nodejs.org/) (v18 or higher)
+- [npm](https://www.npmjs.com/) or [pnpm](https://pnpm.io/)
+- Modern web browser with JavaScript enabled
 
-## <a name="introduction">✨ Introduction</a>
+## Getting Started
 
-Build an AI-powered Resume Analyzer with React, React Router, and Puter.js! Implement seamless auth, upload and store resumes, and match candidates to jobs using smart AI evaluations. Get custom feedback and ATS scores tailored to each listing—all wrapped in a clean, reusable UI.
-
-If you're getting started and need assistance or face any bugs, join our active Discord community with over **50k+** members. It's a place where people help each other out.
-
-<a href="https://discord.com/invite/n6EdbFJ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e" /></a>
-
-## <a name="tech-stack">⚙️ Tech Stack</a>
-
-- **[React](https://react.dev/)** is a popular open‑source JavaScript library for building user interfaces using reusable components and a virtual DOM, enabling efficient, dynamic single-page and native apps.
-
-- **[React Router v7](https://reactrouter.com/)** is the go‑to routing library for React apps, offering nested routes, data loaders/actions, error boundaries, code splitting, and SSR support—all with a smooth upgrade path from v6.
-
-- **[Puter.com](https://jsm.dev/resumind-puter)** is an advanced, open-source internet operating system designed to be feature-rich, exceptionally fast, and highly extensible. Puter can be used as: A privacy-first personal cloud to keep all your files, apps, and games in one secure place, accessible from anywhere at any time.
-
-- **[Puter.js](https://jsm.dev/resumind-puterjs)** is a tiny client‑side SDK that adds serverless auth, storage, database, and AI (GPT, Claude, DALL·E, OCR…) straight into your browser app—no backend needed and costs borne by users.
-
-- **[Tailwind CSS](https://tailwindcss.com/)** is a utility-first CSS framework that allows developers to design custom user interfaces by applying low-level utility classes directly in HTML, streamlining the design process.
-
-- **[TypeScript](https://www.typescriptlang.org/)** is a superset of JavaScript that adds static typing, providing better tooling, code quality, and error detection for developers, making it ideal for building large-scale applications.
-
-- **[Vite](https://vite.dev/)** is a fast build tool and dev server using native ES modules for instant startup, hot‑module replacement, and Rollup‑powered production builds—perfect for modern web development.
-
-- **[Zustand](https://github.com/pmndrs/zustand)** is a minimal, hook-based state management library for React. It lets you manage global state with zero boilerplate, no context providers, and excellent performance through selective state subscriptions.
-
-## <a name="features">🔋 Features</a>
-
-👉 **Easy & convenient auth**: Handle authentication entirely in the browser using Puter.js—no backend or setup required.
-
-👉 **Resume upload & storage**: Let users upload and store all their resumes in one place, safely and reliably.
-
-👉 **AI resume matching**: Provide a job listing and get an ATS score with custom feedback tailored to each resume.
-
-👉 **Reusable, modern UI**: Built with clean, consistent components for a great-looking and maintainable interface.
-
-👉 **Code Reusability**: Leverage reusable components and a modular codebase for efficient development.
-
-👉 **Cross-Device Compatibility**: Fully responsive design that works seamlessly across all devices.
-
-👉 **Modern UI/UX**: Clean, responsive design built with Tailwind CSS and shadcn/ui for a sleek user experience.
-
-And many more, including code architecture and reusability.
-
-## <a name="quick-start">🤸 Quick Start</a>
-
-Follow these steps to set up the project locally on your machine.
-
-**Prerequisites**
-
-Make sure you have the following installed on your machine:
-
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
-
-**Cloning the Repository**
-
+1. Clone the repository:
 ```bash
 git clone https://github.com/adrianhajdin/ai-resume-analyzer.git
 cd ai-resume-analyzer
 ```
 
-**Installation**
-
-Install the project dependencies using npm:
-
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-**Running the Project**
-
+3. Start the development server:
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser to view the project.
+4. Open your browser and navigate to:
+```
+http://localhost:5173
+```
 
-## <a name="links">🔗 Assets</a>
+## Available Scripts
 
-Assets and snippets used in the project can be found in the **[video kit](https://jsm.dev/resumind-kit)**.
+- `npm run dev` - Start development server with hot module replacement
+- `npm run build` - Build production-ready application
+- `npm run start` - Start production server
+- `npm run typecheck` - Run TypeScript type checking
 
-<a href="https://jsm.dev/resumind-kit" target="_blank">
-  <img src="public/readme/videokit.webp" alt="Video Kit Banner">
-</a>
+## Project Structure
 
-## <a name="more">🚀 More</a>
+```
+app/
+├── routes/              # Page components
+│   ├── home.tsx        # Resume dashboard
+│   ├── upload.tsx      # Resume upload & analysis
+│   ├── resume.tsx      # Detailed feedback view
+│   ├── auth.tsx        # Authentication page
+│   └── wipe.tsx        # Data cleanup utility
+├── components/         # Reusable UI components
+│   ├── ATS.tsx         # ATS score display with suggestions
+│   ├── FileUploader.tsx # PDF drag-and-drop uploader
+│   ├── ScoreGauge.tsx  # Animated SVG score gauge
+│   ├── Summary.tsx     # Overall score summary
+│   ├── Details.tsx     # Detailed feedback accordion
+│   ├── Navbar.tsx      # Navigation bar
+│   ├── ResumeCard.tsx  # Resume list item
+│   ├── ScoreBadge.tsx  # Score badge component
+│   ├── ScoreCircle.tsx # Score circle display
+│   └── Accordion.tsx   # Reusable accordion component
+├── lib/
+│   ├── puter.ts       # Zustand store for Puter.js API
+│   ├── pdf2img.ts     # PDF to PNG conversion utility
+│   └── utils.ts       # Helper functions
+├── root.tsx           # App layout & error boundary
+└── routes.ts          # Route configuration
+constants/
+└── index.ts           # AI prompt templates & sample data
+types/
+├── index.d.ts         # TypeScript type definitions
+└── puter.d.ts         # Puter.js type definitions
+public/
+├── icons/             # SVG icons
+└── images/            # Static images and backgrounds
+```
 
-**Advance your skills with Next.js Pro Course**
+## How It Works
 
-Enjoyed creating this project? Dive deeper into our PRO courses for a richer learning adventure. They're packed with
-detailed explanations, cool features, and exercises to boost your skills. Give it a go!
+1. **Authentication** - Users sign in via Puter.js browser-based authentication
+2. **Upload Resume** - Users upload a PDF resume and provide job details (company name, job title, job description)
+3. **Processing** - The application:
+   - Uploads the PDF to Puter cloud storage
+   - Converts the first page to PNG for preview
+   - Stores resume metadata in Puter's key-value database
+4. **AI Analysis** - Claude AI analyzes the resume against the job description using a structured prompt
+5. **Feedback Display** - Users receive:
+   - Overall ATS score (0-100)
+   - Category-specific scores and tips
+   - Visual score gauges and badges
+   - Actionable improvement suggestions
+6. **Resume Management** - All analyzed resumes are saved and accessible from the dashboard
 
-<a href="https://jsm.dev/resumind-courses" target="_blank">
-  <img src="public/readme/jsmpro.webp" alt="Project Banner">
-</a>
+## Key Features Explained
+
+### ATS Scoring
+The application evaluates how well your resume will perform with Applicant Tracking Systems used by employers. Scores are categorized as:
+- 70-100: Great Job (Green)
+- 50-69: Good Start (Yellow)
+- 0-49: Needs Improvement (Red)
+
+### AI Feedback Categories
+Each resume receives detailed feedback across five dimensions:
+- **ATS Compatibility** - Keyword optimization, formatting, and parseability
+- **Tone & Style** - Professional language, consistency, and voice
+- **Content Quality** - Relevance, achievements, and impact statements
+- **Structure & Formatting** - Organization, readability, and visual hierarchy
+- **Skills Alignment** - Match between your skills and job requirements
+
+### Serverless Architecture
+Puter.js provides a complete backend infrastructure without requiring server setup:
+- No API keys or environment variables needed
+- User costs borne by the platform
+- Automatic scaling and reliability
+- Built-in security and privacy
+
+## Browser Compatibility
+
+- Chrome/Edge (recommended)
+- Firefox
+- Safari
+- Opera
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is open source and available under the MIT License.
+
+## Acknowledgments
+
+- Built with [React Router v7](https://reactrouter.com/)
+- Powered by [Puter.js](https://puter.com/) serverless platform
+- AI analysis by Claude (Anthropic)
+- UI components styled with [Tailwind CSS](https://tailwindcss.com/)
