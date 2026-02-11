@@ -49,7 +49,7 @@ Resumind analyzes your resume against job descriptions using Claude AI, providin
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/adrianhajdin/ai-resume-analyzer.git
+git clone https://github.com/Sanket-Das/ResuMind.git
 cd ai-resume-analyzer
 ```
 
